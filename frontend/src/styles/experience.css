@@ -1,0 +1,108 @@
+.exp {
+  padding: 40px 0 110px;
+}
+
+.exp-panel {
+  position: relative;
+  height: min(78vh, 700px);
+  min-height: 520px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 163, 78, 0.2);
+  background:
+    radial-gradient(900px 500px at 50% 60%, rgba(255, 122, 24, 0.12), transparent 65%),
+    linear-gradient(180deg, #150c07, #0d0705);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.exp-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.exp-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.exp-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 163, 78, 0.4);
+  background: rgba(12, 7, 5, 0.7);
+  backdrop-filter: blur(10px);
+  font-size: 11.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.exp-hints {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(12, 7, 5, 0.66);
+  border: 1px solid rgba(226, 163, 78, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.exp-hints div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 13.5px;
+  color: var(--cream);
+  letter-spacing: 0.03em;
+}
+
+.exp-hints span {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  border: 1px solid rgba(226, 163, 78, 0.4);
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(226, 163, 78, 0.08);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .exp-panel {
+    min-height: 440px;
+    height: 62vh;
+  }
+  .exp-hints {
+    top: auto;
+    bottom: 16px;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    gap: 14px;
+  }
+  .exp-hints div {
+    font-size: 11.5px;
+    gap: 7px;
+  }
+  .exp-hints span {
+    width: 24px;
+    height: 24px;
+  }
+}

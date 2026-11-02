@@ -1,0 +1,86 @@
+.success {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: radial-gradient(900px 600px at 50% 30%, rgba(255, 122, 24, 0.12), transparent 60%), #0c0705;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.success-canvas {
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+}
+
+.success-core {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 24px;
+}
+
+.success-ring {
+  margin: 30px 0 20px;
+  position: relative;
+}
+
+.success-ring::after {
+  content: '';
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 180, 94, 0.25);
+  animation: successPulse 2.4s ease-out infinite;
+}
+
+.success-ring svg {
+  filter: drop-shadow(0 0 26px rgba(255, 180, 94, 0.45));
+  background: radial-gradient(circle, rgba(255, 180, 94, 0.12), transparent 65%);
+  border-radius: 50%;
+}
+
+.success h1 {
+  font-size: clamp(30px, 4.6vw, 44px);
+  margin-bottom: 8px;
+}
+
+.success p {
+  color: var(--cream-dim);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.success-order {
+  margin-top: 14px;
+  padding: 8px 18px;
+  border: 1px solid rgba(226, 163, 78, 0.3);
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  background: rgba(226, 163, 78, 0.07);
+}
+
+.success .btn-gold {
+  margin-top: 26px;
+  min-width: 200px;
+  justify-content: center;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.28);
+    opacity: 0;
+  }
+}

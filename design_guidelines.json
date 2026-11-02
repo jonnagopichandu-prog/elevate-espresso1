@@ -1,0 +1,334 @@
+{
+  "project_name": "ELEVATE ESPRESSO",
+  "brand_archetype": "Luxury Dark Coffee / Cinematic Amber & Gold",
+  "app_type": "hybrid_fullstack marketing/e-commerce single-page experience",
+  "tech_stack": {
+    "framework": "React + Vite",
+    "3d_engine": "Three.js / React Three Fiber (@react-three/fiber) / Drei (@react-three/drei)",
+    "animation_engine": "GSAP + Framer Motion (micro-interactions)",
+    "styling": "Vanilla CSS with Custom CSS Variables (Plain CSS, no Tailwind dependency)"
+  },
+  "colors": {
+    "espresso_black": "#100B08",
+    "deep_brown": "#1A0E08",
+    "warm_gold": "#E2A34E",
+    "amber": "#FFB45E",
+    "cream": "#F5E9D8",
+    "cinematic_orange": "#FF7A00",
+    "cinematic_orange_glow": "rgba(255, 122, 0, 0.35)",
+    "gold_gradient_start": "#F3C06B",
+    "gold_gradient_end": "#C98832",
+    "card_glass_bg": "rgba(26, 14, 8, 0.75)",
+    "card_border_gold": "rgba(226, 163, 78, 0.25)",
+    "text_primary": "#F5E9D8",
+    "text_secondary": "#C4A68A",
+    "text_muted": "#8A7360"
+  },
+  "css_variables": {
+    "--bg-espresso": "#100B08",
+    "--bg-deep-brown": "#1A0E08",
+    "--color-gold": "#E2A34E",
+    "--color-amber": "#FFB45E",
+    "--color-cream": "#F5E9D8",
+    "--color-orange-glow": "#FF7A00",
+    "--glass-surface": "rgba(26, 14, 8, 0.75)",
+    "--glass-border": "rgba(226, 163, 78, 0.25)",
+    "--font-serif": "'Playfair Display', Cormorant Garamond, Georgia, serif",
+    "--font-sans": "'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif"
+  },
+  "typography": {
+    "heading_font": "Playfair Display, Cormorant Garamond, serif",
+    "body_font": "Outfit, Plus Jakarta Sans, sans-serif",
+    "scales": {
+      "h1_hero": "clamp(2.75rem, 5vw, 4rem)",
+      "h2_section": "clamp(2rem, 3.5vw, 2.75rem)",
+      "h3_card": "1.5rem",
+      "h4_sub": "1.25rem",
+      "body": "1rem",
+      "small_meta": "0.875rem",
+      "eyebrow": "0.75rem"
+    },
+    "letter_spacing": {
+      "eyebrow": "0.25em",
+      "heading": "-0.02em",
+      "button": "0.05em"
+    }
+  },
+  "layout_and_spacing": {
+    "container_max_width": "1280px",
+    "section_padding_desktop": "6rem 2rem",
+    "section_padding_mobile": "3.5rem 1.25rem",
+    "border_radius": {
+      "card": "16px",
+      "pill": "9999px",
+      "input": "8px"
+    }
+  },
+  "screens_specification": {
+    "1_loading_screen": {
+      "name": "Animated Loading Screen",
+      "components": [
+        "Glowing gold circular ring logo with embossed gold leaf motif",
+        "'Elevate Espresso' serif wordmark with gold foil shine effect",
+        "Floating/flying 3D coffee beans particles using Canvas/GSAP",
+        "Subtle gold particle field",
+        "Status text: 'Brewing Your Experience...'",
+        "Gold gradient progress bar with live percentage counter (0% to 100%)"
+      ],
+      "data_test_ids": {
+        "container": "loading-screen-container",
+        "logo_ring": "loading-logo-ring",
+        "progress_bar": "loading-progress-bar",
+        "percentage_text": "loading-percentage-text"
+      }
+    },
+    "2_login_screen": {
+      "name": "Premium Login Screen",
+      "layout": "Dark split composition (Left: mood café photography with coffee plants and steaming cup; Right: glassmorphism card form)",
+      "components": [
+        "Left split background image with warm rim lighting overlay",
+        "Centered glassmorphic card with gold leaf crest logo",
+        "'Welcome Back' serif heading and luxury subtitle",
+        "Email input field with mail icon",
+        "Password input field with lock icon + show/hide eye",
+        "Remember me checkbox + Forgot password gold link",
+        "Gold gradient CTA pill button: 'Login to Your Account'",
+        "Social login buttons: Google & Apple with sleek dark glass styling",
+        "'Create Account' gold link"
+      ],
+      "data_test_ids": {
+        "container": "login-screen-container",
+        "email_input": "login-email-input",
+        "password_input": "login-password-input",
+        "remember_me_checkbox": "login-remember-me-checkbox",
+        "submit_button": "login-submit-button",
+        "google_login_button": "login-google-button",
+        "apple_login_button": "login-apple-button"
+      }
+    },
+    "3_homepage_hero": {
+      "name": "Homepage Hero Section",
+      "navigation_bar": {
+        "brand_logo": "Elevate Espresso gold ring emblem",
+        "links": ["Home", "Shop", "Our Story", "Experience", "Contact"],
+        "action_icons": ["Search Icon", "User Account Icon", "Cart Icon with live item count badge (2)"]
+      },
+      "hero_content_left": {
+        "eyebrow": "PREMIUM COFFEE EXPERIENCE",
+        "main_heading": "Elevate Your Coffee Experience",
+        "subline": "Handcrafted single-origin roasts infused with gold-standard precision. Experience coffee elevated to fine art.",
+        "buttons": [
+          "Gold Gradient Pill: 'Shop Coffee →'",
+          "Outlined Glass Pill: '▶ Watch Story'"
+        ],
+        "scroll_indicator": "Mouse icon with animated scrolling gold dot"
+      },
+      "hero_3d_right": {
+        "type": "Interactive Three.js / R3F Canvas",
+        "elements": [
+          "Realistic 3D matte black ceramic coffee cup on saucer",
+          "Embossed gold 'Elevate Espresso' leaf logo on cup body",
+          "Detailed latte art in golden crema cream",
+          "Rising animated steam particles",
+          "Slow floating 3D roasted coffee beans",
+          "Glowing gold orbital rings encircling the cup",
+          "Cinematic orange rim light (#FF7A00)"
+        ]
+      },
+      "data_test_ids": {
+        "nav_bar": "hero-navigation-bar",
+        "cart_icon": "hero-cart-icon",
+        "shop_cta": "hero-shop-coffee-button",
+        "watch_story_cta": "hero-watch-story-button",
+        "canvas_3d": "hero-3d-cup-canvas"
+      }
+    },
+    "4_signature_collection": {
+      "name": "Signature Coffee Range Product Carousel",
+      "eyebrow": "OUR COLLECTION",
+      "heading": "Masterpiece Roasts",
+      "products": [
+        {
+          "id": "prod-1",
+          "name": "Dark Roast Reserve",
+          "roast_level": "Dark Roast • Ethiopian Yirgacheffe",
+          "price": "₹599",
+          "rating": 4.9,
+          "reviews": 128,
+          "weight": "250g • Whole Bean",
+          "image_description": "Matte black coffee pouch with metallic gold leaf seal and mountain artwork",
+          "data_test_id": "product-card-dark-roast-reserve"
+        },
+        {
+          "id": "prod-2",
+          "name": "Royal Gold Espresso",
+          "roast_level": "Medium Dark • Colombian Supremo",
+          "price": "₹749",
+          "rating": 5.0,
+          "reviews": 210,
+          "weight": "250g • Whole Bean",
+          "image_description": "Black luxury pouch with geometric gold foil patterns",
+          "data_test_id": "product-card-royal-gold-espresso"
+        },
+        {
+          "id": "prod-3",
+          "name": "Midnight Velvet",
+          "roast_level": "Extra Dark • Sumatra Mandheling",
+          "price": "₹799",
+          "rating": 4.8,
+          "reviews": 94,
+          "weight": "250g • Whole Bean",
+          "image_description": "Matte black coffee pouch with gold emblem and deep obsidian texture",
+          "data_test_id": "product-card-midnight-velvet"
+        },
+        {
+          "id": "prod-4",
+          "name": "Amber Bloom Light Roast",
+          "roast_level": "Light Medium • Costa Rican Tarrazú",
+          "price": "₹699",
+          "rating": 4.9,
+          "reviews": 165,
+          "weight": "250g • Whole Bean",
+          "image_description": "Matte black coffee pouch with glowing amber floral art",
+          "data_test_id": "product-card-amber-bloom"
+        }
+      ],
+      "controls": "Left & Right gold arrow buttons + 4 pagination dots",
+      "data_test_ids": {
+        "carousel_container": "product-carousel-container",
+        "prev_button": "product-carousel-prev-button",
+        "next_button": "product-carousel-next-button",
+        "add_to_cart_btn": "product-add-to-cart-button"
+      }
+    },
+    "5_interactive_3d_experience": {
+      "name": "Interactive 3D Experience Section",
+      "badge": "INTERACTIVE EXPERIENCE",
+      "heading": "Touch the Essence of Craftsmanship",
+      "canvas_spec": "Full-width immersive R3F viewport with interactive camera rotation, mouse inertia, orbital gold rings, glowing golden particles, and floating interactive coffee beans that burst into aromatic gold spark dust when clicked",
+      "control_hints_panel": [
+        "🖱️ Drag to Rotate Scene",
+        "🔍 Scroll to Zoom View",
+        "✨ Click Beans to Unleash Aroma"
+      ],
+      "data_test_ids": {
+        "container": "interactive-3d-section-container",
+        "canvas": "interactive-3d-experience-canvas",
+        "control_panel": "interactive-3d-control-hints"
+      }
+    },
+    "6_our_story": {
+      "name": "Our Story — From Bean to Brew",
+      "layout": "2-column grid (Left: Barista craftsmanship photo with gold border highlight; Right: Narrative copy)",
+      "heading": "From Bean to Brew",
+      "paragraph": "Founded on a relentless pursuit of coffee perfection, Elevate Espresso curates only the top 1% of single-origin arabica beans. Roasted in micro-batches under precision temperature control, every bean embodies warmth, depth, and golden crema.",
+      "features": [
+        {
+          "icon": "Leaf Icon",
+          "title": "Ethically Sourced",
+          "desc": "Direct trade with sustainable high-altitude micro-farms."
+        },
+        {
+          "icon": "Flame Icon",
+          "title": "Small Batch Roasted",
+          "desc": "Custom drum roasted in 5kg batches for peak flavor extraction."
+        },
+        {
+          "icon": "Award Icon",
+          "title": "Expertly Crafted",
+          "desc": "Master roasters calibrated for ultimate creaming and aroma notes."
+        }
+      ],
+      "button": "Outlined Gold Pill: 'Our Journey →'",
+      "data_test_ids": {
+        "container": "our-story-section-container",
+        "image": "our-story-barista-image",
+        "journey_button": "our-story-journey-button"
+      }
+    },
+    "7_cart_drawer": {
+      "name": "Slide-over Cart Drawer ('Your Bag')",
+      "title": "Your Bag (2)",
+      "items": [
+        {
+          "name": "Dark Roast Reserve",
+          "meta": "250g • Whole Bean",
+          "price": "₹599",
+          "quantity": 1
+        },
+        {
+          "name": "Royal Gold Espresso",
+          "meta": "250g • Whole Bean",
+          "price": "₹749",
+          "quantity": 1
+        }
+      ],
+      "calculation_summary": {
+        "subtotal": "₹1,348",
+        "delivery": "FREE",
+        "total": "₹1,348"
+      },
+      "cta": "Gold Gradient Button: 'Proceed to Checkout →'",
+      "data_test_ids": {
+        "drawer_container": "cart-drawer-container",
+        "close_button": "cart-drawer-close-button",
+        "quantity_increase": "cart-item-qty-increase-button",
+        "quantity_decrease": "cart-item-qty-decrease-button",
+        "checkout_button": "cart-checkout-button"
+      }
+    },
+    "8_order_success_modal": {
+      "name": "Order Success Screen / Confirmation",
+      "elements": [
+        "Glowing gold circular checkmark icon with pulse animation",
+        "Serif Heading: 'Order Placed Successfully!'",
+        "Confirmation text: 'Thank you for elevating your daily ritual. Your master roast is currently being prepared.'",
+        "Floating decorative 3D coffee beans",
+        "Gold Gradient Button: 'Track Order'",
+        "Secondary Link: 'Continue Browsing'"
+      ],
+      "data_test_ids": {
+        "modal_container": "order-success-modal-container",
+        "track_order_button": "order-success-track-order-button"
+      }
+    },
+    "9_footer_and_contact": {
+      "name": "Footer & Contact Section",
+      "elements": [
+        "Elevate Espresso gold leaf logo & motto",
+        "Quick Navigation Links (Home, Shop, Story, Experience, Contact)",
+        "Newsletter signup form: Email input with gold 'Subscribe' button",
+        "Contact Info: Atelier address, booking email, hotline",
+        "Social Icons: Instagram, Twitter/X, YouTube",
+        "Copyright & Legal links in subtle cream text"
+      ],
+      "data_test_ids": {
+        "footer_container": "footer-container",
+        "newsletter_input": "footer-newsletter-email-input",
+        "newsletter_submit": "footer-newsletter-submit-button"
+      }
+    }
+  },
+  "image_urls": {
+    "login_cafe_bg": "https://images.unsplash.com/photo-1579265898841-79c7890d69cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHw0fHxkYXJrJTIwY29mZmVlJTIwY3VwJTIwd2FybSUyMGdvbGRlbiUyMGxpZ2h0JTIwbGF0dGUlMjBhcnR8ZW58MHx8fHwxNzkzNjMxMTM1fDA&ixlib=rb-4.1.0&q=85",
+    "beans_texture_background": "https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbHV4dXJ5JTIwZXNwcmVzc28lMjBjb2ZmZWUlMjBiZWFucyUyMGJhcmlzdGF8ZW58MHx8fHwxNzkzMjc4ODA3fDA&ixlib=rb-4.1.0&q=85",
+    "hero_fallback_cup": "https://images.unsplash.com/photo-1506372023823-741c83b836fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxkYXJrJTIwY29mZmVlJTIwY3VwJTIwd2FybSUyMGdvbGRlbiUyMGxpZ2h0JTIwbGF0dGUlMjBhcnR8ZW58MHx8fHwxNzkzNjMxMTM1fDA&ixlib=rb-4.1.0&q=85",
+    "story_barista_photo": "https://images.unsplash.com/photo-1497636577773-f1231844b336?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwzfHxkYXJrJTIwY29mZmVlJTIwY3VwJTIwd2FybSUyMGdvbGRlbiUyMGxpZ2h0JTIwbGF0dGUlMjBhcnR8ZW58MHx8fHwxNzkzNjMxMTM1fDA&ixlib=rb-4.1.0&q=85",
+    "roasting_process_photo": "https://images.unsplash.com/photo-1606486544554-164d98da4889?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxkYXJrJTIwbHV4dXJ5JTIwZXNwcmVzc28lMjBjb2ZmZWUlMjBiZWFucyUyMGJhcmlzdGF8ZW58MHx8fHwxNzkzMjc4ODA3fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "1. Define CSS custom variables in App.css or index.css matching the provided palette: --bg-espresso: #100B08, --bg-deep-brown: #1A0E08, --color-gold: #E2A34E, --color-amber: #FFB45E, --color-cream: #F5E9D8, --color-orange-glow: #FF7A00.",
+    "2. Use Google Fonts link in index.html for 'Playfair Display' (Serif) and 'Outfit' (Sans-Serif).",
+    "3. Implement the Loading Screen overlay that displays on initial load with progress 0-100%, then smoothly fades out using GSAP or CSS transition.",
+    "4. Create the 3D Coffee Cup Component in Three.js / R3F (@react-three/fiber + @react-three/drei): render a matte black cup geometry with gold emblem material, cream latte art circle surface, animated steam particles (Points or Canvas Sprite), floating coffee beans mesh with subtle rotation, and an orange point light (#FF7A00) positioning behind the cup for dramatic rim glow.",
+    "5. Build all interactive states for the Cart Drawer, Login Modal, Product Selection, Quantity Adjustment, and Order Success Popup.",
+    "6. Ensure all pricing is in Indian Rupees (₹599, ₹749, ₹799, ₹699).",
+    "7. Include data-testid attributes on all interactive elements as requested."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Maintain APCA contrast ratios with cream text on dark coffee backgrounds.",
+    "Do NOT use Inter font for headings; stick strictly to Playfair Display for titles and Outfit for body.",
+    "Ensure all buttons have hover, active, and focus states with smooth 0.2s cubic-bezier transitions.",
+    "Add data-testid to every button, input, link, cart stepper, and section container."
+  ]
+}

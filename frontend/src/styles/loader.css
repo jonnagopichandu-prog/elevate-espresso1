@@ -1,0 +1,141 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0c0705;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preloader-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/img/beans-bg.jpg') center/cover no-repeat;
+  opacity: 0.3;
+  filter: brightness(0.55) saturate(1.15);
+  box-shadow: inset 0 0 240px 80px #0c0705;
+}
+
+.preloader-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.preloader-core {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.pl-ring {
+  width: 236px;
+  height: 236px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 180, 94, 0.5);
+  box-shadow: 0 0 60px rgba(255, 180, 94, 0.28), inset 0 0 46px rgba(255, 180, 94, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+  animation: plPulse 2.6s ease-in-out infinite;
+}
+
+.pl-ring::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  border-top-color: #ffb45e;
+  animation: plSpin 2.2s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 180, 94, 0.9));
+}
+
+.pl-ring::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  border-bottom-color: rgba(226, 163, 78, 0.7);
+  animation: plSpin 3.4s linear infinite reverse;
+  filter: drop-shadow(0 0 10px rgba(226, 163, 78, 0.7));
+}
+
+.pl-word {
+  font-family: var(--serif);
+  font-size: 31px;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.15;
+}
+
+.pl-word-gold {
+  color: var(--gold);
+}
+
+.pl-status {
+  font-size: 14px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.pl-bar {
+  width: 300px;
+  height: 3px;
+  background: rgba(226, 163, 78, 0.18);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.pl-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #c9822f, #ffb45e);
+  border-radius: 99px;
+  box-shadow: 0 0 14px rgba(255, 180, 94, 0.8);
+  transition: width 0.18s ease;
+}
+
+.pl-pct {
+  font-size: 15px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+@keyframes plSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes plPulse {
+  0%, 100% {
+    box-shadow: 0 0 60px rgba(255, 180, 94, 0.28), inset 0 0 46px rgba(255, 180, 94, 0.14);
+  }
+  50% {
+    box-shadow: 0 0 90px rgba(255, 180, 94, 0.45), inset 0 0 60px rgba(255, 180, 94, 0.22);
+  }
+}
+
+@media (max-width: 480px) {
+  .pl-ring {
+    width: 190px;
+    height: 190px;
+  }
+  .pl-word {
+    font-size: 25px;
+  }
+  .pl-bar {
+    width: 220px;
+  }
+}
